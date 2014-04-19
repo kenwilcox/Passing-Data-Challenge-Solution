@@ -7,6 +7,7 @@
 //
 
 #import "KXViewController.h"
+#import "KXDetailViewController.h"
 
 @interface KXViewController ()
 
@@ -24,6 +25,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  //  NSLog(@"segue: %@ - sender: %@", segue, sender);
+  if ([sender isKindOfClass:[UIButton class]])
+  {
+    if ([segue.destinationViewController isKindOfClass:[KXDetailViewController class]])
+    {
+      KXDetailViewController *nextViewController = segue.destinationViewController;
+      nextViewController.sentText = self.textField.text;
+    }
+  }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  for (UIView *view in self.view.subviews)
+    [view resignFirstResponder];
 }
 
 @end

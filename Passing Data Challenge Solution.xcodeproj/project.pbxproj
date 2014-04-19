@@ -21,6 +21,8 @@
 		BE2BA3831902A1D000784247 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2BA3651902A1D000784247 /* UIKit.framework */; };
 		BE2BA38B1902A1D000784247 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE2BA3891902A1D000784247 /* InfoPlist.strings */; };
 		BE2BA38D1902A1D000784247 /* Passing_Data_Challenge_SolutionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2BA38C1902A1D000784247 /* Passing_Data_Challenge_SolutionTests.m */; };
+		BE2BA3971902A29A00784247 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE2BA3961902A29A00784247 /* README.md */; };
+		BE2BA39D1902A44900784247 /* KXDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2BA39C1902A44900784247 /* KXDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		BE2BA3881902A1D000784247 /* Passing Data Challenge SolutionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Passing Data Challenge SolutionTests-Info.plist"; sourceTree = "<group>"; };
 		BE2BA38A1902A1D000784247 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE2BA38C1902A1D000784247 /* Passing_Data_Challenge_SolutionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Passing_Data_Challenge_SolutionTests.m; sourceTree = "<group>"; };
+		BE2BA3961902A29A00784247 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		BE2BA39B1902A44900784247 /* KXDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KXDetailViewController.h; sourceTree = "<group>"; };
+		BE2BA39C1902A44900784247 /* KXDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KXDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 		BE2BA3551902A1D000784247 = {
 			isa = PBXGroup;
 			children = (
+				BE2BA3961902A29A00784247 /* README.md */,
 				BE2BA3671902A1D000784247 /* Passing Data Challenge Solution */,
 				BE2BA3861902A1D000784247 /* Passing Data Challenge SolutionTests */,
 				BE2BA3601902A1D000784247 /* Frameworks */,
@@ -117,6 +123,8 @@
 				BE2BA3731902A1D000784247 /* Main.storyboard */,
 				BE2BA3761902A1D000784247 /* KXViewController.h */,
 				BE2BA3771902A1D000784247 /* KXViewController.m */,
+				BE2BA39B1902A44900784247 /* KXDetailViewController.h */,
+				BE2BA39C1902A44900784247 /* KXDetailViewController.m */,
 				BE2BA3791902A1D000784247 /* Images.xcassets */,
 				BE2BA3681902A1D000784247 /* Supporting Files */,
 			);
@@ -231,6 +239,7 @@
 			files = (
 				BE2BA37A1902A1D000784247 /* Images.xcassets in Resources */,
 				BE2BA36C1902A1D000784247 /* InfoPlist.strings in Resources */,
+				BE2BA3971902A29A00784247 /* README.md in Resources */,
 				BE2BA3751902A1D000784247 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2BA39D1902A44900784247 /* KXDetailViewController.m in Sources */,
 				BE2BA3781902A1D000784247 /* KXViewController.m in Sources */,
 				BE2BA36E1902A1D000784247 /* main.m in Sources */,
 				BE2BA3721902A1D000784247 /* KXAppDelegate.m in Sources */,

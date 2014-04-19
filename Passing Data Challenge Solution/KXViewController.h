@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface KXViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end
