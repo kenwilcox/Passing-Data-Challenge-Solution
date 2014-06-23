@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KXDetailViewController.h"
 
-@interface KXViewController : UIViewController
+@interface KXViewController : UIViewController <KXDetailViewControllerDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 
 @end

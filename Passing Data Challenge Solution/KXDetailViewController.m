@@ -28,12 +28,20 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   self.textLabel.text = self.sentText;
+  self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+// Hide the Keyboard if the user touches outside of it
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  for (UIView *view in self.view.subviews)
+    [view resignFirstResponder];
 }
 
 /*
@@ -46,5 +54,19 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+- (IBAction)updateButtonPressed:(UIButton *)sender
+{
+  self.textLabel.text = self.textField.text;
+  [self.delegate didUpdateText:self.textField.text];
+}
+
+#pragma mark - UITextFieldDelegate
+// Hide the Keyboard if the user presses the return key
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [self.textField resignFirstResponder];
+  return YES;
+}
 
 @end

@@ -17,14 +17,15 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  self.textField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -36,14 +37,31 @@
     {
       KXDetailViewController *nextViewController = segue.destinationViewController;
       nextViewController.sentText = self.textField.text;
+      nextViewController.delegate = self;
     }
   }
 }
 
+// Hide the Keyboard if the user touches outside of it
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
   for (UIView *view in self.view.subviews)
     [view resignFirstResponder];
+}
+
+#pragma mark - KXDetailViewControllerDelegate
+-(void)didUpdateText:(NSString *)text
+{
+  self.textField.text = text;
+}
+
+
+#pragma mark - UITextFieldDelegate
+// Hide the Keyboard if the user presses the return key
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+  [self.textField resignFirstResponder];
+  return YES;
 }
 
 @end

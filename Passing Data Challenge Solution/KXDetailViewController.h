@@ -8,7 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KXDetailViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@protocol KXDetailViewControllerDelegate <NSObject>
+
+@required
+-(void)didUpdateText:(NSString *)text;
+
+@end
+
+@interface KXDetailViewController : UIViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) id <KXDetailViewControllerDelegate> delegate;
 @property (strong, nonatomic) NSString *sentText;
+
+@property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+
+- (IBAction)updateButtonPressed:(UIButton *)sender;
+
 @end
